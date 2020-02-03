@@ -21,7 +21,7 @@ EOF
 }
 
 add() {
-    if $INPUT_FORCE; then f=-f; fi
+    if $INPUT_FORCE; then f=-f; else f=; fi
     find $INPUT_PATH -name "$INPUT_PATTERN" $INPUT_FIND_ARGS | while read x; do git add $f $x; done
 }
 
