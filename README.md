@@ -39,6 +39,10 @@ Add a step like this to your workflow:
     # Whether to use the --force option on git add, in order to bypass eventual gitignores
     # Default: false
     force: true
+
+    # The arguments to use with the find command in the action script
+    # Default: ''
+    find_args: '-not -path "./idk/*"'
   env:
     # This is necessary in order to push a commit to the repo
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged

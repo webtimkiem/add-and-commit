@@ -22,7 +22,7 @@ EOF
 
 add() {
     if $INPUT_FORCE; then f=-f; fi
-    find $INPUT_PATH -name "$INPUT_PATTERN" | while read x; do git add $f $x; done
+    find $INPUT_PATH -name "$INPUT_PATTERN" $INPUT_FIND_ARGS | while read x; do git add $f $x; done
 }
 
 # This is needed to make the check work for untracked files
